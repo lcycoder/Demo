@@ -1,0 +1,260 @@
+@import "reset.css";
+@import "common.css";
+/* 统一样式 */
+body{
+    line-height: 2;
+}
+button{
+    cursor: pointer;
+}
+a{
+    color: #37a;
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    background-color: #37a;
+}
+a:active{
+    color: #fff;
+    background-color: #f93;
+}
+/* 首页通用样式 */
+.container{
+    width:1000px;  /* 这里不设置高度是因为高度需要自适应,由内容撑开 */
+    margin: 0 auto;
+
+}
+
+/* 页头开始 */
+.header{
+    height: 90px;
+    padding-top:30px;/* 这里不给container加margin-top的原因是: container的margin-top会带动header一起向下移动,造成margin坍塌*/
+    box-sizing: border-box;/* 怪异盒模型  指设定的尺寸包含内容和其他部分 */
+    margin-bottom: 10px;
+}
+
+/* .header .logo,.header .menu, .header .serach{
+    height: 30px;
+    border: 2px solid;
+} */
+.header .logo a{
+    display: block;
+    width:  154px;
+    height: 0px;
+    padding-top: 30px;
+    overflow: hidden;
+    background:url("../image/logo_db.png")no-repeat ;
+}
+
+
+
+.header .search {
+    width: 270px;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+    margin-left: 20px;
+    position: relative;
+    line-height: normal;
+}
+.header .search .txt{
+    width: 240px;
+    height: 20px;
+    padding: 5px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+.header .search .txt::placeholder{
+    color: #ccc;
+}
+.header .search button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    color: #c3c3c3;
+}
+.header .menu{
+    margin-top: 6px;
+}
+.header .menu a{
+    background:url("../image/nav_logo.png") no-repeat left top /463px 20px ;
+    width: 40px;
+    height: 20px;
+    float:left;
+    margin-left: 20px;
+}
+.header .menu .menu-1{
+    background-position: 0 0;
+}
+.header .menu .menu-2{
+    background-position: -60px 0;
+}
+.header .menu .menu-3{
+    background-position: -120px 0;
+}
+.header .menu .menu-4{
+    background-position: -180px 0;
+}
+.header .menu .menu-5{
+    background-position: -240px 0;
+}
+.header .menu .menu-6{
+    background-position: -300px 0;
+}
+.header .menu .menu-7{
+    background-position: -360px 0;
+}
+.header .menu .menu-8{
+    background-position: -420px 0;
+    width: 43px;
+}
+.banner{
+    height:304px;
+    background:url("../image/banner-bg.png") no-repeat 100px top/auto 100%;
+    background-color: #edf4ed;
+}
+.banner .container .loginarea{
+    width: 320px;
+    height: 320px;
+}
+.banner .container .slogan{
+    margin-top:88px;
+    margin-right:32px
+    
+}
+.banner .container .slogan p{
+    
+    display: block;
+    font-size:25px;
+    color: #111111;
+    line-height: 24px;
+}
+.banner .download .btn{
+    width: 110px;
+    height: 30px;
+
+}
+.banner  .container .download  .qrcode {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #48aa0d;
+    border-radius: 2px; 
+    vertical-align: bottom;
+    position: relative;
+}
+.banner  .container .download  .qrcode img{
+    width: 100%;
+    height: 100%;
+
+}
+.banner  .container .download   .qrcode .qrcode-img{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-color: #fff;
+    width: 200px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 4px;
+    
+}
+.banner  .container .slogan p{
+    color: #666;
+    font-size: 25px;
+    margin-bottom: 18px;
+    margin-top: 30px;
+}
+.banner .container .slogan .download .qrcode p{
+    font-size: 13px;
+}
+.banner  .container .download   .qrcode:hover .qrcode-img{
+    display: block;
+}
+.section{
+    margin-top: 30px; 
+    line-height: normal;
+}
+.section .container .aside-left{  /* 左栏 */
+    float: left;
+    width: 100px;
+}
+.section .container .aside-right{ /* 右栏 */
+    float: right;
+    width: 265px;
+}
+.section .container .aside-right .adv-img{
+    display: block;
+    width:100%;
+}
+.section .container .main{
+    overflow: hidden;
+}
+.setction-title .titleh2{
+    font-size:15px;
+    color:#072;
+    margin: 0 0 12px 0;
+    display: inline-block;
+}
+.setction-title .title-wear{
+    font-size: 12px;
+}
+.setction-title .title-wear::before{
+    content: "(";
+
+}
+.setction-title .title-wear::after{
+    content: ")";
+}
+.section .container .aside-right .cont .cont-ul{
+    list-style: none;
+}
+.section .container .aside-right .cont .cont-ul .browse{
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.section .container .main .left .main-lr{
+    text-align: justify;/* 最后一行无法进行平均分配 */
+}
+.hot-main ul::after{
+    content: "";
+    width: 100%;
+    display: inline-block;/* 手动在最后加一个空的样式 */
+}
+.hot-main .left li{
+    display: inline-block;
+    width: 200px;
+    font-size: 12px;
+    margin: 10px 0;
+    vertical-align: top;
+}
+.hot-main .left li .img img{
+    width: 100%;
+    display: block;
+}
+.hot-main .left li .words span{
+    color: #999;
+}
+.hot-main .left{
+    width: 420px;
+}
+.hot-main .right{
+    width: 275px;
+    font-size: 12px;
+}
+.hot-main .right li{
+    margin-bottom:12px ;
+}
+.hot-main .right li .title{
+    color: #999;
+}
+.hot-main .right li .desc{
+    color: #666;
+}
+.hot-main .right ul{
+    list-style: none;
+}

@@ -1,0 +1,29 @@
+
+/* body{
+    font-family: ;
+} */
+*{
+    margin:0;
+    padding: 0;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.clearfix::after{ 
+    content:"";
+    display: block;
+    clear: both;
+}
+.hidden{
+    display: none;
+}
+.btn{
+    background:#41ac52;
+    cursor:pointer;
+    color:#fff;
+    text-align: center;
+    border-radius:4px  ;
+}
