@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../plugin/waterfall.js"></script>
+    <script>
+        var srcs = [];
+        for(var i=0;i<=40;i++){
+            srcs.push(`img/${i}.jpg`);
+        }
+        myPlugin.createWaterFall({
+            minHgap: 10,// 水平方向的最小间隙
+            minVGap: 15,// 垂直方向的最小间隙
+            imgSrcs: srcs,
+            imgWidth:220 
+        });
+        function handleParent(){
+            //如果父元素不是定位元素,
+            var style = getComputedStyle(option.container)
+            console.log(style.position);
+        }
+    </script>
+</body>
+</html>
