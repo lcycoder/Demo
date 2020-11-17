@@ -5,30 +5,30 @@
     }
     AudioManage.prototype={
         //加载音乐
-        load(){
+        load:function(src){
             this.audio.src=src; //设置音乐的路径
             this.audio.load();  //加载音乐
         },
 
         //播放音乐
-        play(){
+        play:function(){
             this.audio.play();
             this.status='play';
         },
 
         //暂停音乐
-        pause(){
+        pause:function(){
             this.audio.pause();
             this.status='pause';
         },
 
         //音乐播放完成事件
-        end(fn){
+        end:function(fn){
             this.audio.onended=fn;
         },
 
         //跳到音乐的某个时间点
-        playTo(time){
+        playTo:function(time){
             this.audio.currentTime=time;    //单位为秒
         }
     }

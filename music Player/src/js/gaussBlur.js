@@ -10,7 +10,6 @@
 			i, j, k, len;
 
 		var radius = 10;
-		
 		var sigma = 5;
 
 		a = 1 / (Math.sqrt(2 * Math.PI) * sigma);
